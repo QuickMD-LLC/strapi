@@ -11,22 +11,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Product": {
+    "Name": {
       "type": "string",
       "required": true
     },
     "Price": {
       "type": "decimal",
       "required": true,
-      "min": 0.01
-    },
-    "Type": {
-      "type": "enumeration",
-      "enum": [
-        "Type 1",
-        "Type 2"
-      ],
-      "required": true
+      "min": 0
     }
   }
 }
