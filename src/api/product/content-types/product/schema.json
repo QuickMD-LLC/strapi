@@ -4,21 +4,43 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Product"
+    "displayName": "Product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Price": {
+    "price": {
       "type": "decimal",
       "required": true,
       "min": 0
+    },
+    "brand": {
+      "type": "string"
+    },
+    "directions": {
+      "type": "text"
+    },
+    "frequency": {
+      "type": "string"
+    },
+    "dispense_amount": {
+      "type": "string"
+    },
+    "pharmacy": {
+      "type": "enumeration",
+      "enum": [
+        "Hallandale"
+      ]
+    },
+    "quantity": {
+      "type": "string"
     }
   }
 }
