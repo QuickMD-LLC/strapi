@@ -381,34 +381,35 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    brand: Schema.Attribute.String;
+    Brand: Schema.Attribute.String;
+    Category: Schema.Attribute.Enumeration<['WeightLoss', 'MOUD']> &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    directions: Schema.Attribute.Text;
-    dispense_amount: Schema.Attribute.String;
-    frequency: Schema.Attribute.String;
+    DrugCode: Schema.Attribute.String & Schema.Attribute.Required;
+    DrugName: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    pharmacy: Schema.Attribute.Enumeration<['Hallandale']>;
-    price: Schema.Attribute.Decimal &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
+    Options: Schema.Attribute.Component<
+      'prescription.prescription-option',
+      true
+    >;
+    Pharmacy: Schema.Attribute.Enumeration<['Hallandale']>;
+    Protocol: Schema.Attribute.Enumeration<['Semaglutide', 'Tirzepatide']> &
+      Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    quantity: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Variation: Schema.Attribute.Enumeration<
+      ['Compounded', 'Branded', 'PharmacyPickup']
+    > &
+      Schema.Attribute.Required;
   };
 }
 

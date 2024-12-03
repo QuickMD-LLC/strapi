@@ -12,35 +12,53 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "WeightLoss",
+        "MOUD"
+      ],
+      "required": true
+    },
+    "Protocol": {
+      "type": "enumeration",
+      "enum": [
+        "Semaglutide",
+        "Tirzepatide"
+      ],
+      "required": true
+    },
+    "Variation": {
+      "type": "enumeration",
+      "enum": [
+        "Compounded",
+        "Branded",
+        "PharmacyPickup"
+      ],
+      "required": true
+    },
+    "Brand": {
+      "type": "string",
+      "required": false
+    },
+    "DrugName": {
       "type": "string",
       "required": true
     },
-    "price": {
-      "type": "decimal",
-      "required": true,
-      "min": 0
+    "DrugCode": {
+      "type": "string",
+      "required": true
     },
-    "brand": {
-      "type": "string"
-    },
-    "directions": {
-      "type": "text"
-    },
-    "frequency": {
-      "type": "string"
-    },
-    "dispense_amount": {
-      "type": "string"
-    },
-    "pharmacy": {
+    "Pharmacy": {
       "type": "enumeration",
       "enum": [
         "Hallandale"
       ]
     },
-    "quantity": {
-      "type": "string"
+    "Options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "prescription.prescription-option"
     }
   }
 }

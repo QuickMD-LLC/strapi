@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_prescription_prescription_options",
+  "info": {
+    "displayName": "Prescription Option",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Dosage": {
+      "type": "string",
+      "required": true
+    },
+    "Frequency": {
+      "type": "string",
+      "required": true
+    },
+    "DispenseAmount": {
+      "type": "string",
+      "required": true
+    },
+    "DispenseUnits": {
+      "type": "string",
+      "required": true
+    },
+    "Duration": {
+      "type": "enumeration",
+      "enum": [
+        "One (1) Month",
+        "Three (3) Months"
+      ],
+      "required": true
+    }
+  }
+}
