@@ -41,10 +41,6 @@
       "type": "string",
       "required": false
     },
-    "DrugName": {
-      "type": "string",
-      "required": true
-    },
     "DrugCode": {
       "type": "string",
       "required": true
