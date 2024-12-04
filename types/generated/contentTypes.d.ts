@@ -422,6 +422,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       ['One_Month', 'Three_Months']
     > &
       Schema.Attribute.Required;
+    fulfillmentType: Schema.Attribute.Enumeration<['treat', 'zendesk']> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
