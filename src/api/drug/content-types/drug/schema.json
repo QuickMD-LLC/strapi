@@ -12,12 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "DrugName": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "DrugCode": {
+    "code": {
       "type": "string",
       "required": true,
       "unique": true

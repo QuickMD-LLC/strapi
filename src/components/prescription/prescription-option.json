@@ -7,16 +7,16 @@
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Price": {
+    "price": {
       "type": "decimal",
       "required": true
     },
-    "Dosage": {
+    "dosage": {
       "type": "enumeration",
       "enum": [
         "Solution Pen-injector"
@@ -24,7 +24,7 @@
       "default": "Solution Pen-injector",
       "required": true
     },
-    "Frequency": {
+    "frequency": {
       "type": "enumeration",
       "enum": [
         "weekly"
@@ -32,11 +32,11 @@
       "default": "weekly",
       "required": true
     },
-    "DispenseAmount": {
+    "dispenseAmount": {
       "type": "string",
       "required": true
     },
-    "DispenseUnits": {
+    "dispenseUnits": {
       "type": "enumeration",
       "default": "ml(s)",
       "enum": [
@@ -44,7 +44,7 @@
       ],
       "required": true
     },
-    "DurationDays": {
+    "durationDays": {
       "type": "enumeration",
       "enum": [
         "days_28",
@@ -59,7 +59,7 @@
       "relation": "oneToOne",
       "target": "api::drug.drug"
     },
-    "Sig": {
+    "sig": {
       "type": "text",
       "required": true
     }

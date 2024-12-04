@@ -381,18 +381,18 @@ export interface ApiDrugDrug extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    code: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    DrugCode: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    DrugName: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::drug.drug'> &
       Schema.Attribute.Private;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -412,13 +412,13 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Brand: Schema.Attribute.String;
-    Category: Schema.Attribute.Enumeration<['WeightLoss', 'MOUD']> &
+    brand: Schema.Attribute.String;
+    category: Schema.Attribute.Enumeration<['WeightLoss', 'MOUD']> &
       Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    DisplayDuration: Schema.Attribute.Enumeration<
+    displayDuration: Schema.Attribute.Enumeration<
       ['One_Month', 'Three_Months']
     > &
       Schema.Attribute.Required;
@@ -428,18 +428,18 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
-    Options: Schema.Attribute.Component<
+    options: Schema.Attribute.Component<
       'prescription.prescription-option',
       true
     >;
-    Pharmacy: Schema.Attribute.Enumeration<['Hallandale']>;
-    Protocol: Schema.Attribute.Enumeration<['Semaglutide', 'Tirzepatide']> &
+    pharmacy: Schema.Attribute.Enumeration<['Hallandale']>;
+    protocol: Schema.Attribute.Enumeration<['Semaglutide', 'Tirzepatide']> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Variation: Schema.Attribute.Enumeration<
+    variation: Schema.Attribute.Enumeration<
       ['Compounded', 'Branded', 'PharmacyPickup']
     > &
       Schema.Attribute.Required;

@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Category": {
+    "category": {
       "type": "enumeration",
       "enum": [
         "WeightLoss",
@@ -20,7 +20,7 @@
       ],
       "required": true
     },
-    "Protocol": {
+    "protocol": {
       "type": "enumeration",
       "enum": [
         "Semaglutide",
@@ -28,7 +28,7 @@
       ],
       "required": true
     },
-    "Variation": {
+    "variation": {
       "type": "enumeration",
       "enum": [
         "Compounded",
@@ -37,11 +37,11 @@
       ],
       "required": true
     },
-    "Brand": {
+    "brand": {
       "type": "string",
       "required": false
     },
-    "DisplayDuration": {
+    "displayDuration": {
       "type": "enumeration",
       "enum": [
         "One_Month",
@@ -49,13 +49,13 @@
       ],
       "required": true
     },
-    "Pharmacy": {
+    "pharmacy": {
       "type": "enumeration",
       "enum": [
         "Hallandale"
       ]
     },
-    "Options": {
+    "options": {
       "type": "component",
       "repeatable": true,
       "component": "prescription.prescription-option"

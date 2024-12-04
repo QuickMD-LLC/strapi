@@ -8,26 +8,26 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    DispenseAmount: Schema.Attribute.String & Schema.Attribute.Required;
-    DispenseUnits: Schema.Attribute.Enumeration<['ml(s)']> &
+    dispenseAmount: Schema.Attribute.String & Schema.Attribute.Required;
+    dispenseUnits: Schema.Attribute.Enumeration<['ml(s)']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'ml(s)'>;
-    Dosage: Schema.Attribute.Enumeration<['Solution Pen-injector']> &
+    dosage: Schema.Attribute.Enumeration<['Solution Pen-injector']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Solution Pen-injector'>;
     drug: Schema.Attribute.Relation<'oneToOne', 'api::drug.drug'>;
-    DurationDays: Schema.Attribute.Enumeration<
+    durationDays: Schema.Attribute.Enumeration<
       ['days_28', 'days_42', 'days_70', 'days_84']
     > &
       Schema.Attribute.Required;
-    Frequency: Schema.Attribute.Enumeration<['weekly']> &
+    frequency: Schema.Attribute.Enumeration<['weekly']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'weekly'>;
-    Name: Schema.Attribute.String &
+    name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
-    Price: Schema.Attribute.Decimal & Schema.Attribute.Required;
-    Sig: Schema.Attribute.Text & Schema.Attribute.Required;
+    price: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    sig: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
