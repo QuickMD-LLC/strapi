@@ -2,23 +2,34 @@
   "collectionName": "components_prescription_prescription_options",
   "info": {
     "displayName": "Prescription Option",
-    "icon": "bulletList"
+    "icon": "bulletList",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "Price": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "Dosage": {
-      "type": "string",
+      "type": "enumeration",
+      "enum": [
+        "Solution Pen-injector"
+      ],
+      "default": "Solution Pen-injector",
       "required": true
     },
     "Frequency": {
-      "type": "string",
+      "type": "enumeration",
+      "enum": [
+        "weekly"
+      ],
+      "default": "weekly",
       "required": true
     },
     "DispenseAmount": {
@@ -26,15 +37,30 @@
       "required": true
     },
     "DispenseUnits": {
-      "type": "string",
+      "type": "enumeration",
+      "default": "ml(s)",
+      "enum": [
+        "ml(s)"
+      ],
       "required": true
     },
-    "Duration": {
+    "DurationDays": {
       "type": "enumeration",
       "enum": [
-        "One (1) Month",
-        "Three (3) Months"
+        "days_28",
+        "days_42",
+        "days_70",
+        "days_84"
       ],
+      "required": true
+    },
+    "drug": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::drug.drug"
+    },
+    "Sig": {
+      "type": "text",
       "required": true
     }
   }

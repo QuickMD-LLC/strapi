@@ -41,8 +41,12 @@
       "type": "string",
       "required": false
     },
-    "DrugCode": {
-      "type": "string",
+    "DisplayDuration": {
+      "type": "enumeration",
+      "enum": [
+        "One_Month",
+        "Three_Months"
+      ],
       "required": true
     },
     "Pharmacy": {
