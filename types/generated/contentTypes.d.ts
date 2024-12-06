@@ -418,10 +418,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    displayDuration: Schema.Attribute.Enumeration<
-      ['One_Month', 'Three_Months']
-    > &
-      Schema.Attribute.Required;
+    displayDuration: Schema.Attribute.String & Schema.Attribute.Required;
     fulfillmentType: Schema.Attribute.Enumeration<['treat', 'zendesk']> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

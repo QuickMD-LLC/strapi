@@ -14,7 +14,8 @@
     },
     "price": {
       "type": "decimal",
-      "required": true
+      "required": true,
+      "min": 0
     },
     "dosage": {
       "type": "enumeration",
@@ -27,14 +28,16 @@
     "frequency": {
       "type": "enumeration",
       "enum": [
-        "weekly"
+        "weekly",
+        "qw"
       ],
       "default": "weekly",
       "required": true
     },
     "dispenseAmount": {
       "type": "decimal",
-      "required": true
+      "required": true,
+      "min": 0
     },
     "dispenseUnits": {
       "type": "enumeration",

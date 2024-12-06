@@ -42,11 +42,7 @@
       "required": false
     },
     "displayDuration": {
-      "type": "enumeration",
-      "enum": [
-        "One_Month",
-        "Three_Months"
-      ],
+      "type": "string",
       "required": true
     },
     "pharmacy": {

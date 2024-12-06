@@ -8,7 +8,14 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    dispenseAmount: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    dispenseAmount: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     dispenseUnits: Schema.Attribute.Enumeration<['ml(s)']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'ml(s)'>;
@@ -17,13 +24,20 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'Solution Pen-injector'>;
     drug: Schema.Attribute.Relation<'oneToOne', 'api::drug.drug'>;
     durationDays: Schema.Attribute.Integer & Schema.Attribute.Required;
-    frequency: Schema.Attribute.Enumeration<['weekly']> &
+    frequency: Schema.Attribute.Enumeration<['weekly', 'qw']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'weekly'>;
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
-    price: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    price: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     sig: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
