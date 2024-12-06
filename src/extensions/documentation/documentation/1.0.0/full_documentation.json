@@ -23,7 +23,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-04T21:30:09.936Z"
+    "x-generation-date": "2024-12-06T00:33:04.199Z"
   },
   "servers": [
     {
@@ -1946,7 +1946,8 @@
             ]
           },
           "dispenseAmount": {
-            "type": "string"
+            "type": "number",
+            "format": "float"
           },
           "dispenseUnits": {
             "type": "string",
@@ -1955,13 +1956,7 @@
             ]
           },
           "durationDays": {
-            "type": "string",
-            "enum": [
-              "days_28",
-              "days_42",
-              "days_70",
-              "days_84"
-            ]
+            "type": "integer"
           },
           "drug": {
             "type": "object",

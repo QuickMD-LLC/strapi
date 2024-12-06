@@ -33,7 +33,7 @@
       "required": true
     },
     "dispenseAmount": {
-      "type": "string",
+      "type": "decimal",
       "required": true
     },
     "dispenseUnits": {
@@ -45,13 +45,7 @@
       "required": true
     },
     "durationDays": {
-      "type": "enumeration",
-      "enum": [
-        "days_28",
-        "days_42",
-        "days_70",
-        "days_84"
-      ],
+      "type": "integer",
       "required": true
     },
     "drug": {
