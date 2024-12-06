@@ -16,6 +16,7 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Solution Pen-injector'>;
     drug: Schema.Attribute.Relation<'oneToOne', 'api::drug.drug'>;
+    durationDays: Schema.Attribute.Integer & Schema.Attribute.Required;
     frequency: Schema.Attribute.Enumeration<['weekly']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'weekly'>;
