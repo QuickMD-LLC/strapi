@@ -44,10 +44,6 @@
       ],
       "required": true
     },
-    "durationDays": {
-      "type": "integer",
-      "required": true
-    },
     "drug": {
       "type": "relation",
       "relation": "oneToOne",
