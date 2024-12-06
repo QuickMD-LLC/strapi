@@ -28,7 +28,6 @@
     "frequency": {
       "type": "enumeration",
       "enum": [
-        "weekly",
         "qw"
       ],
       "default": "weekly",

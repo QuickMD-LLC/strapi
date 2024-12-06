@@ -23,7 +23,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-06T19:49:12.920Z"
+    "x-generation-date": "2024-12-06T20:46:02.085Z"
   },
   "servers": [
     {
@@ -1930,7 +1930,6 @@
           "frequency": {
             "type": "string",
             "enum": [
-              "weekly",
               "qw"
             ]
           },
