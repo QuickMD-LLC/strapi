@@ -39,7 +39,7 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
         },
         number
       >;
-    shoetName: Schema.Attribute.String & Schema.Attribute.Required;
+    shortName: Schema.Attribute.String & Schema.Attribute.Required;
     sig: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }

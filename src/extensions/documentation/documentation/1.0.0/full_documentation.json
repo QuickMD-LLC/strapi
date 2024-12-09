@@ -23,7 +23,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-09T20:01:42.873Z"
+    "x-generation-date": "2024-12-09T20:03:35.930Z"
   },
   "servers": [
     {
@@ -1926,7 +1926,7 @@
           "name": {
             "type": "string"
           },
-          "shoetName": {
+          "shortName": {
             "type": "string"
           },
           "displayDuration": {
