@@ -23,7 +23,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-06T20:46:02.085Z"
+    "x-generation-date": "2024-12-09T20:01:42.873Z"
   },
   "servers": [
     {
@@ -1627,6 +1627,9 @@
                   "zendesk"
                 ]
               },
+              "restriction": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -1746,6 +1749,9 @@
               "zendesk"
             ]
           },
+          "restriction": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -1841,6 +1847,9 @@
                     "zendesk"
                   ]
                 },
+                "restriction": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -1915,6 +1924,12 @@
             "type": "number"
           },
           "name": {
+            "type": "string"
+          },
+          "shoetName": {
+            "type": "string"
+          },
+          "displayDuration": {
             "type": "string"
           },
           "price": {

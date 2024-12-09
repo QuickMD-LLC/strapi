@@ -435,6 +435,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     protocol: Schema.Attribute.Enumeration<['Semaglutide', 'Tirzepatide']> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    restriction: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

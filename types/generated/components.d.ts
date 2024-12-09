@@ -19,6 +19,7 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
     dispenseUnits: Schema.Attribute.Enumeration<['ml(s)']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'ml(s)'>;
+    displayDuration: Schema.Attribute.String & Schema.Attribute.Required;
     dosage: Schema.Attribute.Enumeration<['Solution Pen-injector']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Solution Pen-injector'>;
@@ -38,6 +39,7 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
         },
         number
       >;
+    shoetName: Schema.Attribute.String & Schema.Attribute.Required;
     sig: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }

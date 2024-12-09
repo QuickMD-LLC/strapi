@@ -63,6 +63,9 @@
         "zendesk"
       ],
       "required": true
+    },
+    "restriction": {
+      "type": "text"
     }
   }
 }

@@ -12,6 +12,16 @@
       "required": true,
       "unique": true
     },
+    "shortName": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "displayDuration": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
     "price": {
       "type": "decimal",
       "required": true,
