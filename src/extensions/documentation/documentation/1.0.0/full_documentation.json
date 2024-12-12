@@ -23,7 +23,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-09T20:03:35.930Z"
+    "x-generation-date": "2024-12-12T18:29:56.986Z"
   },
   "servers": [
     {
@@ -1576,7 +1576,8 @@
               "protocol",
               "variation",
               "displayDuration",
-              "fulfillmentType"
+              "fulfillmentType",
+              "pharmacyPickupEnabled"
             ],
             "type": "object",
             "properties": {
@@ -1629,6 +1630,9 @@
               },
               "restriction": {
                 "type": "string"
+              },
+              "pharmacyPickupEnabled": {
+                "type": "boolean"
               },
               "locale": {
                 "type": "string"
@@ -1693,7 +1697,8 @@
           "protocol",
           "variation",
           "displayDuration",
-          "fulfillmentType"
+          "fulfillmentType",
+          "pharmacyPickupEnabled"
         ],
         "properties": {
           "id": {
@@ -1751,6 +1756,9 @@
           },
           "restriction": {
             "type": "string"
+          },
+          "pharmacyPickupEnabled": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -1849,6 +1857,9 @@
                 },
                 "restriction": {
                   "type": "string"
+                },
+                "pharmacyPickupEnabled": {
+                  "type": "boolean"
                 },
                 "createdAt": {
                   "type": "string",

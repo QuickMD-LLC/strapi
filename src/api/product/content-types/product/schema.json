@@ -66,6 +66,11 @@
     },
     "restriction": {
       "type": "text"
+    },
+    "pharmacyPickupEnabled": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

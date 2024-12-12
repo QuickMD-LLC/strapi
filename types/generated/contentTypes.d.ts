@@ -432,6 +432,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       true
     >;
     pharmacy: Schema.Attribute.Enumeration<['Hallandale']>;
+    pharmacyPickupEnabled: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     protocol: Schema.Attribute.Enumeration<['Semaglutide', 'Tirzepatide']> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
