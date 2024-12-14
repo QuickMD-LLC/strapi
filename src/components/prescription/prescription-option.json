@@ -30,17 +30,19 @@
     "dosage": {
       "type": "enumeration",
       "enum": [
-        "Solution Pen-injector"
+        "Solution Pen-injector",
+        "Tablet"
       ],
-      "default": "Solution Pen-injector",
+      "default": null,
       "required": true
     },
     "frequency": {
       "type": "enumeration",
       "enum": [
-        "qw"
+        "qw",
+        "qd"
       ],
-      "default": "weekly",
+      "default": null,
       "required": true
     },
     "dispenseAmount": {
@@ -50,9 +52,10 @@
     },
     "dispenseUnits": {
       "type": "enumeration",
-      "default": "ml(s)",
+      "default": null,
       "enum": [
-        "ml(s)"
+        "ml(s)",
+        "tablet(s)"
       ],
       "required": true
     },

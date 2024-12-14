@@ -23,7 +23,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-12T18:29:56.986Z"
+    "x-generation-date": "2024-12-14T16:42:30.402Z"
   },
   "servers": [
     {
@@ -1950,13 +1950,15 @@
           "dosage": {
             "type": "string",
             "enum": [
-              "Solution Pen-injector"
+              "Solution Pen-injector",
+              "Tablet"
             ]
           },
           "frequency": {
             "type": "string",
             "enum": [
-              "qw"
+              "qw",
+              "qd"
             ]
           },
           "dispenseAmount": {
@@ -1966,7 +1968,8 @@
           "dispenseUnits": {
             "type": "string",
             "enum": [
-              "ml(s)"
+              "ml(s)",
+              "tablet(s)"
             ]
           },
           "durationDays": {
