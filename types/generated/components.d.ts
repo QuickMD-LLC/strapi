@@ -25,9 +25,7 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
     durationDays: Schema.Attribute.Integer & Schema.Attribute.Required;
     frequency: Schema.Attribute.Enumeration<['qw', 'qd']> &
       Schema.Attribute.Required;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
     price: Schema.Attribute.Decimal &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<

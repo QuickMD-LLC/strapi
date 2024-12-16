@@ -10,7 +10,7 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "shortName": {
       "type": "string",
@@ -33,7 +33,6 @@
         "Solution Pen-injector",
         "Tablet"
       ],
-      "default": null,
       "required": true
     },
     "frequency": {
@@ -42,7 +41,6 @@
         "qw",
         "qd"
       ],
-      "default": null,
       "required": true
     },
     "dispenseAmount": {
@@ -52,7 +50,6 @@
     },
     "dispenseUnits": {
       "type": "enumeration",
-      "default": null,
       "enum": [
         "ml(s)",
         "tablet(s)"
