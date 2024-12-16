@@ -36,6 +36,7 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
       >;
     shortName: Schema.Attribute.String & Schema.Attribute.Required;
     sig: Schema.Attribute.Text & Schema.Attribute.Required;
+    sortOrder: Schema.Attribute.Integer;
   };
 }
 

@@ -68,6 +68,9 @@
     "sig": {
       "type": "text",
       "required": true
+    },
+    "sortOrder": {
+      "type": "integer"
     }
   }
 }
