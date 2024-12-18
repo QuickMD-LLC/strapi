@@ -19,8 +19,6 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
     dispenseUnits: Schema.Attribute.Enumeration<['ml(s)', 'tablet(s)']> &
       Schema.Attribute.Required;
     displayDuration: Schema.Attribute.String & Schema.Attribute.Required;
-    dosage: Schema.Attribute.Enumeration<['Solution Pen-injector', 'Tablet']> &
-      Schema.Attribute.Required;
     drug: Schema.Attribute.Relation<'oneToOne', 'api::drug.drug'>;
     durationDays: Schema.Attribute.Integer & Schema.Attribute.Required;
     frequency: Schema.Attribute.Enumeration<['qw', 'qd']> &

@@ -71,6 +71,11 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "treat_pharmacy": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::treat-pharmacy.treat-pharmacy"
     }
   }
 }

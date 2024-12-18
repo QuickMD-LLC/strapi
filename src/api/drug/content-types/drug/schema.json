@@ -21,6 +21,24 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "codeSystem": {
+      "type": "enumeration",
+      "default": "medispan",
+      "enum": [
+        "medispan",
+        "ndc",
+        "placeholder"
+      ],
+      "required": true
+    },
+    "dispenseUnits": {
+      "type": "enumeration",
+      "default": "ml",
+      "enum": [
+        "ml",
+        "tabs"
+      ]
     }
   }
 }

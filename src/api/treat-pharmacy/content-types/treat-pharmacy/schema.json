@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "treat_pharmacies",
+  "info": {
+    "singularName": "treat-pharmacy",
+    "pluralName": "treat-pharmacies",
+    "displayName": "Treat Pharmacy"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "pharmacyId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

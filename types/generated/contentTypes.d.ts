@@ -384,9 +384,16 @@ export interface ApiDrugDrug extends Struct.CollectionTypeSchema {
     code: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
+    codeSystem: Schema.Attribute.Enumeration<
+      ['medispan', 'ndc', 'placeholder']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'medispan'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    dispenseUnits: Schema.Attribute.Enumeration<['ml', 'tabs']> &
+      Schema.Attribute.DefaultTo<'ml'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::drug.drug'> &
       Schema.Attribute.Private;
@@ -439,6 +446,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     restriction: Schema.Attribute.Text;
+    treat_pharmacy: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::treat-pharmacy.treat-pharmacy'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -446,6 +457,40 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       ['Compounded', 'Branded', 'PharmacyPickup']
     > &
       Schema.Attribute.Required;
+  };
+}
+
+export interface ApiTreatPharmacyTreatPharmacy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'treat_pharmacies';
+  info: {
+    displayName: 'Treat Pharmacy';
+    pluralName: 'treat-pharmacies';
+    singularName: 'treat-pharmacy';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::treat-pharmacy.treat-pharmacy'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    pharmacyId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -960,6 +1005,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::drug.drug': ApiDrugDrug;
       'api::product.product': ApiProductProduct;
+      'api::treat-pharmacy.treat-pharmacy': ApiTreatPharmacyTreatPharmacy;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

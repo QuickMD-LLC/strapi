@@ -27,14 +27,6 @@
       "required": true,
       "min": 0
     },
-    "dosage": {
-      "type": "enumeration",
-      "enum": [
-        "Solution Pen-injector",
-        "Tablet"
-      ],
-      "required": true
-    },
     "frequency": {
       "type": "enumeration",
       "enum": [
