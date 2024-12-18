@@ -23,7 +23,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-18T20:47:44.331Z"
+    "x-generation-date": "2024-12-18T20:49:58.121Z"
   },
   "servers": [
     {
@@ -2589,6 +2589,9 @@
           "price": {
             "type": "number",
             "format": "float"
+          },
+          "dosage": {
+            "type": "string"
           },
           "frequency": {
             "type": "string",
