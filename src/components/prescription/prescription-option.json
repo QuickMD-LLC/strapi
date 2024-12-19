@@ -71,14 +71,16 @@
       "type": "string",
       "required": true,
       "minLength": 1,
-      "maxLength": 250
+      "maxLength": 250,
+      "regex": "^[ -~]+$"
     },
     "sortOrder": {
       "type": "integer"
     },
     "noteToPharmacy": {
       "type": "string",
-      "maxLength": 210
+      "maxLength": 210,
+      "regex": "^[ -~]+$"
     }
   }
 }
