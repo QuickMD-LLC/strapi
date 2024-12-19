@@ -73,6 +73,9 @@
     },
     "sortOrder": {
       "type": "integer"
+    },
+    "noteToPharmacy": {
+      "type": "text"
     }
   }
 }
