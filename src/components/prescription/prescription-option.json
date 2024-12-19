@@ -68,14 +68,17 @@
       "target": "api::drug.drug"
     },
     "sig": {
-      "type": "text",
-      "required": true
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 250
     },
     "sortOrder": {
       "type": "integer"
     },
     "noteToPharmacy": {
-      "type": "text"
+      "type": "string",
+      "maxLength": 210
     }
   }
 }

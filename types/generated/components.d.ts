@@ -34,7 +34,10 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
     frequency: Schema.Attribute.Enumeration<['qw', 'qd']> &
       Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    noteToPharmacy: Schema.Attribute.Text;
+    noteToPharmacy: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 210;
+      }>;
     price: Schema.Attribute.Decimal &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
@@ -44,7 +47,12 @@ export interface PrescriptionPrescriptionOption extends Struct.ComponentSchema {
         number
       >;
     shortName: Schema.Attribute.String & Schema.Attribute.Required;
-    sig: Schema.Attribute.Text & Schema.Attribute.Required;
+    sig: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 250;
+        minLength: 1;
+      }>;
     sortOrder: Schema.Attribute.Integer;
   };
 }
